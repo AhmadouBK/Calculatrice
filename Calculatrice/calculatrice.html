@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./calculatrice.css">
+	<title>Calculatrice</title>
+</head>
+<body>
+	<center><h1>MY SUPER CALCULATOR</h1></center>
+	<p class="Title"></p>
+	<p class="Title"></p>
+       	<div class="Screen"></div>
+    			<table class="Calculator">
+    				<tr>
+    					<td colspan="4"><input type="text" value="0" id="ecran" disabled></td>
+    				</tr>
+    				<tr>
+    					<td colspan="2"><input type="button" id = "click" onclick="effacer()" value="DEL"></td>
+    					<td><input type="button" id = "click" onclick="supprimer()" value="C"></td> 
+    					<td><input type="button" id = "click" onclick="diviser()"value="/"></td>
+    				</tr>
+    				<tr>
+    					<td><input type="button" id = "click" onclick="number('7')" value="7"></td>
+    					<td><input type="button" id = "click" onclick="number('8')" value="8"></td>
+    					<td><input type="button" id = "click" onclick="number('9')" value="9"></td>
+    					<td><input type="button" id = "click" onclick="multiplier()" value="*"></td>
+    				</tr>
+    				<tr>
+    					<td><input type="button" id = "click" onclick="number('4')" value="4"></td>
+    					<td><input type="button" id = "click" onclick="number('5')" value="5"></td>
+    					<td><input type="button" id = "click" onclick="number('6')" value="6"></td>
+    					<td><input type="button" id = "click" onclick="soustraction()" value="-"></td>
+    				</tr>
+    				<tr>
+    					<td><input type="button" id = "click" onclick="number('1')"value="1"></td>
+    					<td><input type="button" id = "click" onclick="number('2')"value="2"></td>
+    					<td><input type="button" id = "click" onclick="number('3')"value="3"></td>
+    					<td rowspan="2"><input type="button" id = "click" onclick="addition()"value="+"></td>
+    				</tr>
+    				<tr>
+    					<td><input type="button" id = "click" onclick="number('0')" value="0"></td>
+    					<td><input type="button" onclick="real()" value="."></td>
+    					<td><input type="button" id = "click" onclick="resultat()" value="="></td>
+    				</tr>
+    			</table>
+<script src="./calculatrice.js"></script>
+
+</body>
+</html>

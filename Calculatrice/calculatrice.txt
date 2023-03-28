@@ -1,0 +1,132 @@
+var screen = document.getElementById("ecran");
+var first = 0; var second = 0; var final = 0;
+
+function effacer()
+{
+    screen.value = screen.value.slice(0,-1);
+}
+
+function supprimer()
+{
+    screen.value="";
+}
+
+function number(valeur)
+{
+    if(screen.value == "0" || screen.value == final)
+    {
+        supprimer();   
+    }
+    screen.value += valeur;
+     for (var i = 0; i < screen.value.length; i++)
+            {
+                if (!screen.value.charAt(i) == ".")
+                {
+                    supprimer();
+                    screen.value += valeur;
+                }
+            
+                else
+                {
+                    return 0;
+                }
+            }
+}
+
+function addition()
+{
+    first += parseFloat(screen.value);
+    supprimer();  
+    second = 1;
+}
+
+function soustraction()
+{
+
+    if(first==0)
+    {
+        first=parseFloat(screen.value);
+        supprimer();  
+        second = 2;
+    }
+        else
+        {
+            first -= parseFloat(screen.value);
+            supprimer();
+            second = 2;
+        }
+}
+
+function multiplier()
+{
+   
+    if(first == 0)
+    {
+        first = parseFloat(screen.value);
+        supprimer();  
+        second = 3;
+    }
+    else
+    {
+        first *= parseFloat(screen.value);
+        supprimer();  
+        second = 3;
+    }
+}
+
+function diviser()
+{
+    if (first == 0)
+    {
+        first = parseFloat(screen.value);
+        supprimer();  
+        second=4;
+    }
+}
+
+function real()
+{
+    if(screen.value == "")
+    {
+        screen.value = screen.value;
+    }
+        else
+        {
+            for (var i = 0; i < screen.value.length; i++)
+            {
+                if (screen.value.charAt(i) == ".")
+                {
+                    return 0;
+                }
+            }
+            screen.value = parseFloat(screen.value) + ".";
+        }
+}
+
+function resultat()
+{
+    switch(second)
+    {
+    case 0:
+        final = parseFloat(screen.value);
+        break;
+    
+        case 1: //addition
+            final = eval(first + parseFloat(screen.value));
+            break;
+        
+            case 2: //soustraction
+                    final = eval(first - parseFloat(screen.value));
+                    break;
+
+                    case 3: //multiplier
+                           final = eval(first * parseFloat(screen.value));
+                            break;
+                         case 4: //division
+                                final = eval(first / parseFloat(screen.value));
+                                break;
+        }
+first = 0;
+second = 0;
+screen.value = final;
+}

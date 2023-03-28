@@ -1,0 +1,77 @@
+body
+{
+  background-color: #333333;
+  font-family: "Agency FB, Algerian, Times New Roman";
+}
+
+h1
+{
+  height: 200%;
+  margin: 10px;
+  font-family: 'Agency FB','Algerian','Times New Roman';
+  color: yellow;
+  font-size: 20px;
+}
+
+.Calculator
+{
+  padding: 10px;
+  border-spacing: 5px;
+  border: thick double #333333;
+  background-color: #d9e4f1;
+  position: relative;
+  width: 300px;
+  margin: 50px auto;
+  height: 300px;
+}
+
+tr
+{
+  border: 0px solid;
+  width: auto;
+  margin: 10px;
+  height: 60px;
+}
+
+input[type="button"]
+{
+  width: 100%;
+  height: 100%;
+  padding: auto;
+  text-align: center;
+  background-color: #001122;
+  color: aliceblue;
+  font-size: 20px;
+}
+
+input[type="text"]
+{
+  border: thick double #333333;
+  text-align: right;
+  font-size: 20px;
+  background-color: #001122;
+  height: 60px;
+  font-size: auto;
+  color: aliceblue;
+  width: auto;
+  padding: auto;
+
+
+}
+
+input[type="button"]:hover
+{
+  background-color: #303f4c;
+}
+
+input[type="button"]:active
+{
+  background-color: green;
+}
+
+.Title
+{
+  width: 300px;
+  margin: auto;
+  border-top: 2px ridge green;
+}
